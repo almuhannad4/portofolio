@@ -5,207 +5,709 @@
   <title>Eng. Almuhannad Youssef Shalaha - Technical Project Coordinator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* ====== COLOR VARIABLES ====== */
     :root {
       --primary: #0052CC;
       --primary-light: #e6f0ff;
       --accent: #00b894;
-      --dark: #1b1f3b;
-      --text: #333;
-      --bg: #f4f6fb;
-      --white: #ffffff;
+      --dark: #111827;
+      --text: #374151;
+      --bg: #f3f4f8;
       --card: #ffffff;
-      --shadow: 0 14px 35px rgba(0,0,0,0.14);
-      --radius: 20px;
+      --radius-lg: 24px;
+      --radius-md: 14px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.16);
+      --shadow-light: 0 8px 18px rgba(15, 23, 42, 0.10);
     }
 
-    * {box-sizing: border-box; margin: 0; padding: 0;}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: "Montserrat","Cairo",sans-serif;
-      background: var(--bg);
+      font-family: "Montserrat", "Cairo", system-ui, sans-serif;
+      background: radial-gradient(circle at top, #dde7ff, #f3f4f8);
       color: var(--text);
-      padding: 20px;
       line-height: 1.7;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1150px;
+      margin: 24px auto 40px;
+      padding: 0 16px 40px;
     }
 
-    /* ====== HEADER / HERO ====== */
+    /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(135deg, #003e9e, #0a183d);
-      padding: 32px;
-      border-radius: var(--radius);
+      background: linear-gradient(135deg, #003e9e, #0b1535);
       color: white;
+      padding: 28px 26px;
+      border-radius: var(--radius-lg);
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-main-title {
+      font-size: .9rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      opacity: .8;
+      margin-bottom: 6px;
+    }
+
+    .hero-name {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .hero-role {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      opacity: .95;
+    }
+
+    .hero-role-ar {
+      font-family: "Cairo", sans-serif;
+      font-size: .95rem;
+      margin-bottom: 12px;
+      opacity: .95;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .78rem;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .hero-tag i { font-size: .8rem; }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .86rem;
+      opacity: .96;
+    }
+
+    .hero-contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-contact-item i {
+      color: var(--accent);
+      font-size: .95rem;
+    }
+
+    .hero-photo {
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.9);
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+      justify-self: center;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== SECTIONS ===== */
+    .section {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      margin-top: 26px;
+      padding: 20px 22px 22px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .section-header {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--dark);
+      display: inline-flex;
       align-items: center;
-      gap: 25px;
-      box-shadow: var(--shadow);
+      gap: 8px;
     }
 
-    .hero .info h1 {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    .hero .info h3 {opacity: .9; margin-top: 6px;}
-    .hero .info p {font-family: "Cairo"; font-size: .95rem; margin-top: 8px;}
+    .section-title i { color: var(--primary); }
 
-    .hero .tags {
-      margin: 15px 0;
-      display: flex; flex-wrap: wrap; gap: 8px;
+    .section-subtitle-ar {
+      font-family: "Cairo", sans-serif;
+      font-size: .9rem;
+      color: #6b7280;
     }
-    .tag {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 6px 12px;
-      border-radius: 14px;
-      font-size: .8rem;
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    p { font-size: .9rem; margin-bottom: 6px; }
+
+    .en { direction: ltr; }
+    .ar { direction: rtl; font-family: "Cairo", sans-serif; }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 10px;
+      font-size: .88rem;
+    }
+
+    .skill-card {
+      background: var(--primary-light);
+      border-radius: var(--radius-md);
+      padding: 10px 11px;
+      border: 1px solid rgba(0,82,204,0.18);
+    }
+
+    .skill-card h4 {
+      font-size: .86rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+
+    .skill-card ul { list-style: none; padding-left: 0; margin-top: 4px; }
+    .skill-card li { margin-bottom: 2px; }
+    .skill-card li::before {
+      content: "• ";
+      color: var(--primary);
+    }
+
+    /* ===== TIMELINE (EXPERIENCE) ===== */
+    .timeline {
+      border-left: 2px solid #e5e7eb;
+      margin-top: 10px;
+      padding-left: 14px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 18px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -17px;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--primary);
+      border: 2px solid #f9fafb;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+
+    .timeline-role { color: var(--dark); }
+    .timeline-company { color: var(--primary); font-size: .85rem; margin-top: 2px; }
+    .timeline-date { font-size: .8rem; color: #6b7280; }
+
+    .timeline-body { margin-top: 4px; font-size: .86rem; }
+    .timeline-body ul { margin-top: 4px; margin-left: 16px; }
+    .timeline-body li { margin-bottom: 3px; }
+
+    .timeline-ar {
+      margin-top: 4px;
+      font-size: .84rem;
+      font-family: "Cairo", sans-serif;
+      color: #4b5563;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 10px;
+      font-size: .88rem;
+    }
+
+    .project-card {
+      border-radius: var(--radius-md);
+      border: 1px solid #e5e7eb;
+      padding: 10px 11px;
+      background: #ffffff;
+    }
+
+    .project-card h4 {
+      font-size: .9rem;
+      color: var(--dark);
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
-    .hero .contact {
-      margin-top: 12px;
-      display: flex; flex-wrap: wrap;
-      gap: 14px;
-      font-size: .9rem;
-    }
-    .contact-item i {color: var(--accent);}
-
-    .hero img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: .7rem;
+      margin-left: 4px;
+      background: #ecfdf5;
+      color: #047857;
     }
 
-    /* ====== SECTIONS ====== */
-    section {
-      background: var(--card);
-      padding: 25px;
-      border-radius: var(--radius);
-      margin-top: 28px;
-      box-shadow: var(--shadow);
-    }
+    .project-card .ar { font-size: .84rem; font-family: "Cairo", sans-serif; }
 
-    section h2 {
-      margin-bottom: 12px;
-      color: var(--primary);
-      font-size: 1.4rem;
-      border-bottom: 2px solid var(--primary-light);
-      padding-bottom: 6px;
-    }
-
-    .list {margin-left: 20px;}
-
-    .skills-grid, .projects-grid {
+    /* ===== EDUCATION ===== */
+    .edu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(2, minmax(0,1fr));
       gap: 14px;
+      margin-top: 10px;
+      font-size: .88rem;
     }
 
-    .skill-box, .project-box {
-      padding: 14px;
-      border-radius: 14px;
-      background: var(--primary-light);
-      border-left: 4px solid var(--primary);
+    .edu-item h4 {
+      font-size: .9rem;
+      color: var(--dark);
     }
 
+    .edu-item .school { color: var(--primary); font-size: .86rem; }
+    .edu-item .ar { font-family: "Cairo"; font-size: .84rem; color: #4b5563; }
+
+    /* ===== LISTS ===== */
+    .bullets {
+      margin-top: 8px;
+      font-size: .88rem;
+    }
+
+    .bullets ul { margin-left: 18px; }
+    .bullets li { margin-bottom: 3px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      margin-top: 22px;
+      font-size: .8rem;
+      color: #6b7280;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+      .hero-photo { justify-self: flex-start; }
+      .two-col,
+      .skills-grid,
+      .projects-grid,
+      .edu-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero { padding: 20px; }
+      .section { padding: 16px; }
+      .hero-name { font-size: 1.5rem; }
+    }
   </style>
 </head>
-
 <body>
-  <div class="container">
+  <div class="page">
 
-    <!-- ====== HERO ====== -->
+    <!-- HERO -->
     <header class="hero">
-      <div class="info">
-        <h1>Eng. Almuhannad Youssef Shalaha</h1>
-        <h3>Technical Project Coordinator – Telecom & 5G CPE Specialist</h3>
-        <p>منسّق مشاريع تقني متخصص في أجهزة CPE للجيل الخامس، TR-069/HDM، Wi-Fi، والاعتماد الفني لشركات الاتصالات.</p>
-
-        <div class="tags">
-          <span class="tag"><i class="fa-solid fa-tower-cell"></i>5G CPE Testing</span>
-          <span class="tag"><i class="fa-solid fa-network-wired"></i>TR-069 / HDM</span>
-          <span class="tag"><i class="fa-solid fa-bug"></i>Debugging</span>
-          <span class="tag"><i class="fa-solid fa-signal"></i>KPI Analysis</span>
+      <div>
+        <div class="hero-main-title">PROFESSIONAL PORTFOLIO</div>
+        <h1 class="hero-name">Eng. Almuhannad Youssef Shalaha</h1>
+        <div class="hero-role">5G CPE Projects Manager | Telecom Project Manager | FWA Devices</div>
+        <div class="hero-role-ar">
+          مدير مشاريع أجهزة CPE للجيل الخامس | مدير مشاريع اتصالات | مختص بأجهزة الـ FWA
         </div>
 
-        <div class="contact">
-          <div class="contact-item"><i class="fa-solid fa-phone"></i> +917544423731</div>
-          <div class="contact-item"><i class="fa-solid fa-envelope"></i> nnoress22@gmail.com</div>
-          <div class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/almuhannad</div>
+        <div class="hero-tags">
+          <span class="hero-tag"><i class="fa-solid fa-tower-cell"></i>5G CPE &amp; FWA</span>
+          <span class="hero-tag"><i class="fa-solid fa-network-wired"></i>TR-069 / ACS / HDM</span>
+          <span class="hero-tag"><i class="fa-solid fa-chart-line"></i>KPI &amp; Log Analysis</span>
+          <span class="hero-tag"><i class="fa-solid fa-diagram-project"></i>Telecom Project Coordination</span>
+        </div>
+
+        <div class="hero-contact">
+          <div class="hero-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+917544423731</span>
+          </div>
+          <div class="hero-contact-item">
+            <i class="fa-solid fa-envelope"></i><span>nnoress22@gmail.com</span>
+          </div>
+          <div class="hero-contact-item">
+            <i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/almuhannad</span>
+          </div>
+          <div class="hero-contact-item">
+            <i class="fa-solid fa-location-dot"></i><span>Dubai, United Arab Emirates</span>
+          </div>
         </div>
       </div>
 
-      <img src="mu cv pic.jpg" alt="Profile Photo">
+      <div class="hero-photo">
+        <!-- تأكد أن ملف الصورة بنفس الاسم وفي نفس المجلد -->
+        <img src="mu cv pic.jpg" alt="Profile photo of Eng. Almuhannad">
+      </div>
     </header>
 
-    <!-- ====== ABOUT ====== -->
+    <!-- ABOUT / SUMMARY -->
     <section>
-      <h2>About Me / نبذة عني</h2>
-      <p>
-        Telecom Technical Coordinator with hands-on experience in 5G CPE testing, TR-069/HDM, Wi-Fi analysis,
-        debugging, and field validation for DU UAE and other regional operators.  
-        خبير في اعتماد الأجهزة، تحليل السجلات، دعم ما بعد البيع، والتنسيق مع فرق R&D في الصين.
-      </p>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-user-gear"></i> Profile Summary</h2>
+        <div class="section-subtitle-ar">الملخص المهني</div>
+      </div>
+      <div class="two-col">
+        <div class="en">
+          <p>
+            Results-driven <strong>5G CPE Projects Manager</strong> with 2+ years of direct experience managing
+            Fixed Wireless Access (FWA) device launches for tier-1 operators (DU UAE, Zain Kuwait, Zain Jordan).
+            Expert in end-to-end device integration using <strong>TR-069, ACS, HDM (testbed &amp; live)</strong>,
+            field &amp; lab testing, KPI analysis (RSRP, RSRQ, SINR, CQI, throughput), log analysis, firmware
+            debugging, and post-launch support.
+          </p>
+          <p>
+            Over <strong>15 years of combined experience</strong> in electronics, telecom, and IT projects,
+            including large-scale procurements, CCTV &amp; security systems, X-ray inspection systems, networking,
+            and ICT infrastructure for government and private sectors. Strong coordination skills between operators,
+            vendors, and R&amp;D teams in China, delivering commercially ready 4G/5G CPEs on time.
+          </p>
+        </div>
+        <div class="ar">
+          <p>
+            مدير مشاريع أجهزة CPE للجيل الخامس يتمتع بذهنية عملية ونتائج ملموسة، مع أكثر من
+            <strong>سنتين من الخبرة المباشرة</strong> في إدارة إطلاق أجهزة الـ FWA لدى مشغلي اتصالات
+            من الفئة الأولى (دو الإمارات، زين الكويت، زين الأردن)، وخبرة عملية في التكامل الكامل للأجهزة باستخدام
+            <strong>TR-069 و ACS و HDM</strong> (بيئة الاختبار والبيئة الحية)، والاختبارات المخبرية
+            والميدانية، وتحليل مؤشرات الأداء (RSRP, RSRQ, SINR, CQI, Throughput)، وتحليل السجلات
+            وتنقيح البرمجيات ودعم ما بعد الإطلاق.
+          </p>
+          <p>
+            يمتلك أكثر من <strong>15 عاماً من الخبرة الكلية</strong> في مجالات الإلكترونيات والاتصالات
+            وتقنية المعلومات، بما في ذلك مشتريات وتجهيز مشاريع كبرى، وأنظمة كاميرات المراقبة والأمن،
+            وأنظمة الفحص بالأشعة، وشبكات البيانات والبنية التحتية لتقنية المعلومات في القطاعين الحكومي
+            والخاص. لديه قدرة عالية على التنسيق بين المشغلين والمورّدين وفرق البحث والتطوير في الصين
+            لتسليم أجهزة CPE للجيلين الرابع والخامس جاهزة تجارياً وفي الوقت المحدد.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- ====== SKILLS ====== -->
+    <!-- CORE SKILLS -->
     <section>
-      <h2>Technical Skills / المهارات التقنية</h2>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-star"></i> Core Skills</h2>
+        <div class="section-subtitle-ar">المهارات الأساسية</div>
+      </div>
       <div class="skills-grid">
-        <div class="skill-box">TR-069 / ACS / HDM Integration</div>
-        <div class="skill-box">OpenWRT / Linux / SSH</div>
-        <div class="skill-box">Quectel AT Commands & Modem Debug</div>
-        <div class="skill-box">Wi-Fi Testing (SSID, Security, KPIs)</div>
-        <div class="skill-box">Field Testing & KPI Measurements</div>
-        <div class="skill-box">Firmware Validation & Logs Analysis</div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-tower-cell"></i> 5G CPE &amp; FWA</h4>
+          <ul>
+            <li>5G / 4G CPE testing &amp; validation</li>
+            <li>Field &amp; lab performance measurements</li>
+            <li>Wi-Fi 6/7 testing &amp; SSID/security scenarios</li>
+            <li>Throughput, latency &amp; coverage optimization</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-network-wired"></i> TR-069 / ACS / HDM</h4>
+          <ul>
+            <li>TR-069, TR-369 (USP) concepts</li>
+            <li>ACS / HDM integration &amp; provisioning</li>
+            <li>Auto-configuration, diagnostics, speed tests</li>
+            <li>Device policies, KPIs &amp; management</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-bug"></i> Debug &amp; Logs</h4>
+          <ul>
+            <li>Quectel AT commands &amp; modem logs</li>
+            <li>OpenWRT / Linux CLI / SSH</li>
+            <li>Event logs, syslog, crash analysis</li>
+            <li>Root cause analysis &amp; bug reporting</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-diagram-project"></i> Project Management</h4>
+          <ul>
+            <li>RFP support &amp; technical responses</li>
+            <li>Acceptance testing &amp; documentation</li>
+            <li>Stakeholder &amp; vendor coordination</li>
+            <li>Risk tracking &amp; mitigation</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-clipboard-check"></i> Testing &amp; Quality</h4>
+          <ul>
+            <li>Test plan / test case creation</li>
+            <li>Lab setup &amp; testbed configuration</li>
+            <li>Regression &amp; performance testing</li>
+            <li>Reporting &amp; sign-off criteria</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
+          <ul>
+            <li>Strong bilingual communication (AR/EN)</li>
+            <li>Customer-facing technical discussions</li>
+            <li>Training &amp; knowledge transfer</li>
+            <li>Teamwork &amp; leadership by coordination</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ====== EXPERIENCE ====== -->
+    <!-- EXPERIENCE -->
     <section>
-      <h2>Experience / الخبرة العملية</h2>
-      <ul class="list">
-        <li>5G CPE testing, firmware validation, Wi-Fi performance analysis.</li>
-        <li>TR-069 / HDM provisioning, diagnostics, and device onboarding.</li>
-        <li>Coordination with DU UAE, Zain Kuwait, Zain Jordan.</li>
-        <li>Debugging Quectel modem logs and layer KPI issues.</li>
-        <li>Preparing technical reports and acceptance documentation.</li>
-      </ul>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+        <div class="section-subtitle-ar">الخبرة العملية</div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- 5G CPE Projects Manager -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">5G CPE Projects Manager | Telecom Project Manager – FWA Devices</span>
+            <span class="timeline-date">Dubai, UAE | Current</span>
+          </div>
+          <div class="timeline-company">Neoverse L.L.C / Jointelli – DU UAE, Zain Kuwait, Zain Jordan</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Managed end-to-end 5G CPE projects for DU UAE, from lab integration and testbed setup to live network acceptance.</li>
+              <li>Performed 5G/4G CPE testing, TR-069/HDM provisioning, KPI validation, and Wi-Fi performance analysis.</li>
+              <li>Coordinated with DU FWA, Service Assurance, HDM, and R&amp;D teams in China to resolve device issues and deliver new firmware.</li>
+              <li>Supported RFP 2026 clarifications, technical response documents, and solution acceptance criteria.</li>
+              <li>Prepared detailed technical reports, logs analysis summaries, and device performance dashboards for internal and customer review.</li>
+            </ul>
+            <div class="timeline-ar">
+              • إدارة مشاريع أجهزة CPE للجيل الخامس الخاصة بشركة دو في الإمارات، من مرحلة الدمج في المختبر وإعداد بيئة HDM، إلى القبول على الشبكة الحية.<br>
+              • تنفيذ اختبارات لأجهزة CPE للجيلين الرابع والخامس، وتجهيز الأجهزة عبر TR-069/HDM، والتحقق من مؤشرات الأداء، وتحليل أداء شبكات Wi-Fi.<br>
+              • التنسيق مع فرق دو (FWA، خدمة العملاء، HDM) ومع فرق البحث والتطوير في الصين لحل المشاكل البرمجية وإصدار نسخ جديدة من البرمجيات الثابتة (Firmware).<br>
+              • دعم عطاء 2026 (RFP) من خلال الردود الفنية، والاستفسارات، وتعريف معايير الاعتماد الفني للحلول والأجهزة.<br>
+              • إعداد تقارير فنية تفصيلية، وتحليلات للسجلات (Logs)، ولوحات متابعة لأداء الأجهزة للاستخدام الداخلي وللعميل.
+            </div>
+          </div>
+        </div>
+
+        <!-- Government / Port / ICT & Procurement -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Electronics &amp; Telecom Engineer | IT &amp; Procurement Projects</span>
+            <span class="timeline-date">Syria | 15+ Years</span>
+          </div>
+          <div class="timeline-company">Public Sector – Port &amp; Government Entities</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Led technical evaluation and procurement for large ICT and infrastructure projects (data center, PCs, printers, cabinets, UPS).</li>
+              <li>Managed CCTV surveillance systems, X-ray inspection systems, access control, time attendance, and network installations.</li>
+              <li>Served as Head of Procurement Committee for marine transport projects, handling vendor selection, quotations, and contract follow-up.</li>
+              <li>Coordinated with multiple departments, vendors, and contractors to ensure timely delivery and technical compliance.</li>
+            </ul>
+            <div class="timeline-ar">
+              • قيادة التقييم الفني والمشتريات لمشاريع كبرى في مجال تقنية المعلومات والبنية التحتية (مركز بيانات، حواسيب، طابعات، خزائن شبكات، وأنظمة UPS).<br>
+              • إدارة مشاريع كاميرات المراقبة، وأنظمة الفحص بالأشعة، وأنظمة التحكم بالدخول، وأنظمة حضور وانصراف الموظفين، وشبكات الاتصالات والبيانات.<br>
+              • العمل كرئيس لجنة المشتريات لمشاريع قطاع النقل البحري، مع مسؤولية اختيار المورّدين، ومقارنة العروض، ومتابعة العقود والتنفيذ.<br>
+              • التنسيق مع الأقسام المختلفة والمورّدين والمتعهدين لضمان التسليم في الوقت المحدد، والالتزام بالمواصفات الفنية.
+            </div>
+          </div>
+        </div>
+
+        <!-- Graphic Design -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Graphic Designer (Part-time)</span>
+            <span class="timeline-date">Abu Dhabi, UAE</span>
+          </div>
+          <div class="timeline-company">Lanovill Art</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Worked on visual designs, branding elements, and marketing materials.</li>
+              <li>Supported social media content and layout design for print and digital campaigns.</li>
+            </ul>
+            <div class="timeline-ar">
+              • العمل على التصاميم البصرية وعناصر الهوية البصرية والمواد التسويقية.<br>
+              • دعم محتوى وسائل التواصل الاجتماعي وتصميم المطبوعات والمواد الرقمية.
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- ====== PROJECTS ====== -->
+    <!-- PROJECTS / HIGHLIGHTS -->
     <section>
-      <h2>Key Projects / أهم المشاريع</h2>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Selected Telecom Projects</h2>
+        <div class="section-subtitle-ar">أهم مشاريع الاتصالات وأجهزة CPE</div>
+      </div>
+
       <div class="projects-grid">
-        <div class="project-box"><b>DU UAE – 5G CPE RFP</b><br>End-to-end device testing & acceptance.</div>
-        <div class="project-box"><b>TR-069/HDM Integration</b><br>Onboarding, KPIs & provisioning workflow.</div>
-        <div class="project-box"><b>Field Performance Tests</b><br>Throughput, stability & signal KPIs.</div>
-        <div class="project-box"><b>Quectel Debug</b><br>AT logs, modem analysis, KPI tuning.</div>
+        <div class="project-card">
+          <h4><i class="fa-solid fa-tower-cell"></i> DU UAE – 5G CPE RFP &amp; Acceptance <span class="pill">5G CPE</span></h4>
+          <p>Supported technical clarifications, solution design inputs, and acceptance test plans for DU’s 5G CPE RFP and framework agreement.</p>
+          <p class="ar">
+            دعم الاستفسارات الفنية، والمقترحات التقنية، وخطط الاختبارات الخاصة بعطاء دو لأجهزة CPE للجيل الخامس والاتفاقية الإطارية المرتبطة به.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h4><i class="fa-solid fa-network-wired"></i> TR-069 / HDM Integration &amp; Policies <span class="pill">TR-069</span></h4>
+          <p>Configured device parameters, tested auto-provisioning, HDM KPIs, and device policies for different customer journeys (activation, swap, replacement).</p>
+          <p class="ar">
+            ضبط معاملات أجهزة CPE، واختبار التجهيز الآلي عبر TR-069، والتحقق من مؤشرات الأداء وسياسات HDM
+            لرحلات العملاء المختلفة مثل التفعيل الأولي، واستبدال الجهاز، وإعادة الضبط.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h4><i class="fa-solid fa-road"></i> Field Testing &amp; KPI Benchmarking <span class="pill">Performance</span></h4>
+          <p>Executed field tests with operators to benchmark 5G CPE performance (RSRP, SINR, throughput) across bands and locations.</p>
+          <p class="ar">
+            تنفيذ اختبارات ميدانية مع المشغلين لمقارنة أداء أجهزة CPE للجيل الخامس (RSRP, SINR, السرعة)
+            على حوامل تردد ومواقع مختلفة.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h4><i class="fa-solid fa-shield-halved"></i> Security &amp; Firmware Hardening <span class="pill">Security</span></h4>
+          <p>Collaborated with vendors to align firmware, user access, and logging with DU security, TSRM, and IOC requirements.</p>
+          <p class="ar">
+            التعاون مع المورّدين لمواءمة إعدادات البرمجيات الثابتة، وصلاحيات المستخدمين، وأنظمة التسجيل (Logs)
+            مع متطلبات الأمن السيبراني لدى دو وفرق TSRM و IOC.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- ====== CONTACT FOOTER ====== -->
-    <section style="text-align:center;">
-      <h2>Contact / تواصل معي</h2>
-      <p>Ready for technical coordination, telecom testing projects, and CPE validation roles.</p>
-      <p><b>Email:</b> nnoress22@gmail.com — <b>Phone:</b> +917544423731</p>
+    <!-- EDUCATION & COURSES -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education &amp; Courses</h2>
+        <div class="section-subtitle-ar">التعليم والدورات</div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-item">
+          <h4>Bachelor’s Degree in Electronics / Communications Engineering</h4>
+          <div class="school">Faculty of Engineering</div>
+          <div class="ar">
+            بكالوريوس في هندسة الإلكترونيات والاتصالات – كلية الهندسة.
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <h4>Continuous Professional Development</h4>
+          <div class="school">Online Platforms &amp; Universities</div>
+          <div class="ar">
+            التطوير المهني المستمر عبر منصات تعليمية وجامعات دولية:
+          </div>
+          <div class="bullets">
+            <ul>
+              <li>Introduction to IoT – University of California</li>
+              <li>Programming for Everybody (Python) – University of Michigan</li>
+              <li>PMP / Agile – In Progress</li>
+              <li>Courses in Linux, Networking, Data Analysis &amp; Project Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- TECHNICAL SKILLS FROM CV -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-microchip"></i> Technical Stack</h2>
+        <div class="section-subtitle-ar">المهارات التقنية التفصيلية</div>
+      </div>
+      <div class="bullets">
+        <ul>
+          <li>5G CPE Testing | TR-069 | ACS | HDM | Firmware Debugging</li>
+          <li>KPI Analysis (RSRP, RSRQ, SINR, CQI, Throughput)</li>
+          <li>Wi-Fi 6/7 Testing &amp; Wireless Parameters</li>
+          <li>Log Analysis | OpenWRT | Linux | Basic Networking</li>
+          <li>Project Management | Risk Management | Stakeholder Management</li>
+        </ul>
+        <p class="ar">
+          تشمل المهارات التقنية: اختبارات أجهزة CPE للجيل الخامس، بروتوكول TR-069 وأنظمة ACS / HDM،
+          تنقيح البرمجيات الثابتة، تحليل مؤشرات الأداء اللاسلكية، اختبارات Wi-Fi 6/7، تحليل سجلات الأنظمة،
+          العمل على OpenWRT و Linux، إضافة إلى إدارة المشاريع والمخاطر والتعامل مع أصحاب المصلحة.
+        </p>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-language"></i> Languages</h2>
+        <div class="section-subtitle-ar">اللغات</div>
+      </div>
+      <p><strong>Arabic:</strong> Native | <strong>English:</strong> Very Good</p>
+      <p class="ar">اللغة العربية: اللغة الأم | اللغة الإنجليزية: جيد جداً.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>
+        For full CV, references, or detailed project briefs, please contact:
+        <br>
+        للحصول على السيرة الذاتية الكاملة أو تفاصيل المشاريع، يُرجى التواصل:
+      </p>
+      <p style="margin-top:6px;">
+        <i class="fa-solid fa-envelope"></i> nnoress22@gmail.com &nbsp; | &nbsp;
+        <i class="fa-solid fa-phone"></i> +917544423731
+      </p>
+    </div>
 
   </div>
 </body>
