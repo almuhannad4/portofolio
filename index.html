@@ -4,196 +4,208 @@
   <meta charset="UTF-8" />
   <title>Eng. Almuhannad Youssef Shalaha - Technical Project Coordinator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* ====== COLOR VARIABLES ====== */
     :root {
       --primary: #0052CC;
       --primary-light: #e6f0ff;
       --accent: #00b894;
       --dark: #1b1f3b;
       --text: #333;
-      --bg: #f5f7fb;
-      --card-bg: #ffffff;
-      --border-radius-lg: 18px;
-      --border-radius-md: 12px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --bg: #f4f6fb;
+      --white: #ffffff;
+      --card: #ffffff;
+      --shadow: 0 14px 35px rgba(0,0,0,0.14);
+      --radius: 20px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * {box-sizing: border-box; margin: 0; padding: 0;}
     body {
-      font-family: "Montserrat", "Cairo", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Montserrat","Cairo",sans-serif;
       background: var(--bg);
       color: var(--text);
+      padding: 20px;
       line-height: 1.7;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
+    .container {
       max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 16px 40px;
+      margin: auto;
     }
 
-    /* ========== HEADER / HERO ========== */
+    /* ====== HEADER / HERO ====== */
     .hero {
-      background: radial-gradient(circle at top left, #4c6fff, #051937);
-      color: #fff;
-      border-radius: 26px;
-      padding: 28px 26px;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) auto;
-      gap: 24px;
-      box-shadow: var(--shadow-soft);
-      align-items: center;
-    }
-
-    .hero-main-title {
-      font-size: 1rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      opacity: 0.9;
-      margin-bottom: 6px;
-    }
-
-    .hero-name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .hero-title {
-      font-size: 1.05rem;
-      font-weight: 500;
-      margin-bottom: 12px;
-      opacity: 0.95;
-    }
-
-    .hero-subtitle-ar {
-      font-family: "Cairo", sans-serif;
-      font-size: .95rem;
-      margin-bottom: 12px;
-      opacity: 0.93;
-    }
-
-    .hero-tags {
+      background: linear-gradient(135deg, #003e9e, #0a183d);
+      padding: 32px;
+      border-radius: var(--radius);
+      color: white;
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0 18px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      box-shadow: var(--shadow);
     }
 
-    .hero-tag {
-      border-radius: 999px;
-      padding: 4px 11px;
-      font-size: .78rem;
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.18);
-      display: inline-flex;
+    .hero .info h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .hero .info h3 {opacity: .9; margin-top: 6px;}
+    .hero .info p {font-family: "Cairo"; font-size: .95rem; margin-top: 8px;}
+
+    .hero .tags {
+      margin: 15px 0;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 14px;
+      font-size: .8rem;
+      display: flex;
       align-items: center;
       gap: 6px;
     }
 
-    .hero-contact {
-      display: flex;
-      flex-wrap: wrap;
+    .hero .contact {
+      margin-top: 12px;
+      display: flex; flex-wrap: wrap;
       gap: 14px;
-      font-size: .86rem;
-      opacity: .95;
-    }
-
-    .hero-contact-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-contact-item i {
       font-size: .9rem;
-      color: var(--accent);
     }
+    .contact-item i {color: var(--accent);}
 
-    .hero-photo {
-      width: 150px;
-      height: 150px;
+    .hero img {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid rgba(255,255,255,0.8);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-      justify-self: center;
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
     }
 
-    /* ========== SECTIONS, SKILLS, EXPERIENCE, PROJECTS, ETC... ========== */
-    /* (same styling as previous version – unchanged to keep it clean) */
+    /* ====== SECTIONS ====== */
+    section {
+      background: var(--card);
+      padding: 25px;
+      border-radius: var(--radius);
+      margin-top: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    section h2 {
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 6px;
+    }
+
+    .list {margin-left: 20px;}
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .skill-box, .project-box {
+      padding: 14px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+    }
 
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <!-- HERO -->
+  <div class="container">
+
+    <!-- ====== HERO ====== -->
     <header class="hero">
-      <div>
-        <div class="hero-main-title">PROFESSIONAL PORTFOLIO</div>
-        <h1 class="hero-name">Eng. Almuhannad Youssef Shalaha</h1>
+      <div class="info">
+        <h1>Eng. Almuhannad Youssef Shalaha</h1>
+        <h3>Technical Project Coordinator – Telecom & 5G CPE Specialist</h3>
+        <p>منسّق مشاريع تقني متخصص في أجهزة CPE للجيل الخامس، TR-069/HDM، Wi-Fi، والاعتماد الفني لشركات الاتصالات.</p>
 
-        <div class="hero-title">Technical Project Coordinator – Telecom &amp; 5G CPE Specialist</div>
-
-        <div class="hero-subtitle-ar">
-          منسّق مشاريع تقني متخصص في أجهزة CPE للجيل الخامس، أنظمة TR-069/HDM، واختبارات الاعتماد لشركات الاتصالات.
+        <div class="tags">
+          <span class="tag"><i class="fa-solid fa-tower-cell"></i>5G CPE Testing</span>
+          <span class="tag"><i class="fa-solid fa-network-wired"></i>TR-069 / HDM</span>
+          <span class="tag"><i class="fa-solid fa-bug"></i>Debugging</span>
+          <span class="tag"><i class="fa-solid fa-signal"></i>KPI Analysis</span>
         </div>
 
-        <div class="hero-tags">
-          <span class="hero-tag"><i class="fa-solid fa-tower-cell"></i>5G CPE &amp; Wi-Fi Testing</span>
-          <span class="hero-tag"><i class="fa-solid fa-diagram-project"></i>Technical Project Coordination</span>
-          <span class="hero-tag"><i class="fa-solid fa-network-wired"></i>TR-069 / HDM / ACS</span>
-          <span class="hero-tag"><i class="fa-solid fa-bug"></i>Debugging &amp; KPI Analysis</span>
-        </div>
-
-        <div class="hero-contact">
-          <div class="hero-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>nnoress22@gmail.com</span>
-          </div>
-          <div class="hero-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+917544423731</span>
-          </div>
-          <div class="hero-contact-item">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>linkedin.com/in/almuhannad</span>
-          </div>
+        <div class="contact">
+          <div class="contact-item"><i class="fa-solid fa-phone"></i> +917544423731</div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i> nnoress22@gmail.com</div>
+          <div class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/almuhannad</div>
         </div>
       </div>
 
-      <div class="hero-photo">
-        <img src="mu cv pic.jpg" alt="Profile photo of Eng. Almuhannad" />
-      </div>
+      <img src="mu cv pic.jpg" alt="Profile Photo">
     </header>
 
-    <!-- باقي الأقسام كما هي (About, Skills, Experience, Projects, etc.) -->
-    <!-- يمكنني تعديلها لك إن رغبت أو إضافة أقسام جديدة -->
+    <!-- ====== ABOUT ====== -->
+    <section>
+      <h2>About Me / نبذة عني</h2>
+      <p>
+        Telecom Technical Coordinator with hands-on experience in 5G CPE testing, TR-069/HDM, Wi-Fi analysis,
+        debugging, and field validation for DU UAE and other regional operators.  
+        خبير في اعتماد الأجهزة، تحليل السجلات، دعم ما بعد البيع، والتنسيق مع فرق R&D في الصين.
+      </p>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section>
+      <h2>Technical Skills / المهارات التقنية</h2>
+      <div class="skills-grid">
+        <div class="skill-box">TR-069 / ACS / HDM Integration</div>
+        <div class="skill-box">OpenWRT / Linux / SSH</div>
+        <div class="skill-box">Quectel AT Commands & Modem Debug</div>
+        <div class="skill-box">Wi-Fi Testing (SSID, Security, KPIs)</div>
+        <div class="skill-box">Field Testing & KPI Measurements</div>
+        <div class="skill-box">Firmware Validation & Logs Analysis</div>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section>
+      <h2>Experience / الخبرة العملية</h2>
+      <ul class="list">
+        <li>5G CPE testing, firmware validation, Wi-Fi performance analysis.</li>
+        <li>TR-069 / HDM provisioning, diagnostics, and device onboarding.</li>
+        <li>Coordination with DU UAE, Zain Kuwait, Zain Jordan.</li>
+        <li>Debugging Quectel modem logs and layer KPI issues.</li>
+        <li>Preparing technical reports and acceptance documentation.</li>
+      </ul>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section>
+      <h2>Key Projects / أهم المشاريع</h2>
+      <div class="projects-grid">
+        <div class="project-box"><b>DU UAE – 5G CPE RFP</b><br>End-to-end device testing & acceptance.</div>
+        <div class="project-box"><b>TR-069/HDM Integration</b><br>Onboarding, KPIs & provisioning workflow.</div>
+        <div class="project-box"><b>Field Performance Tests</b><br>Throughput, stability & signal KPIs.</div>
+        <div class="project-box"><b>Quectel Debug</b><br>AT logs, modem analysis, KPI tuning.</div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT FOOTER ====== -->
+    <section style="text-align:center;">
+      <h2>Contact / تواصل معي</h2>
+      <p>Ready for technical coordination, telecom testing projects, and CPE validation roles.</p>
+      <p><b>Email:</b> nnoress22@gmail.com — <b>Phone:</b> +917544423731</p>
+    </section>
 
   </div>
 </body>
