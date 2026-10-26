@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Eng. Almuhannad Youssef Shalaha - Technical Project Coordinator</title>
+  <title>Eng. Almuhannad Youssef Shalaha - Project &amp; Delivery Manager | Technical Pre-Sales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional portfolio of Eng. Almuhannad Youssef Shalaha: Project &amp; Delivery Manager and B2B technical sales professional with 20+ years of experience across the GCC. 5G CPE &amp; FWA, AI solutions, technical project management." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Eng. Almuhannad Youssef Shalaha - Project &amp; Delivery Manager | Technical Pre-Sales" />
+  <meta property="og:description" content="Project &amp; Delivery Manager and B2B technical sales professional with 20+ years of experience across the GCC." />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -74,13 +78,6 @@
       font-size: 1.05rem;
       font-weight: 500;
       margin-bottom: 10px;
-      opacity: .95;
-    }
-
-    .hero-role-ar {
-      font-family: "Cairo", sans-serif;
-      font-size: .95rem;
-      margin-bottom: 12px;
       opacity: .95;
     }
 
@@ -168,15 +165,9 @@
 
     .section-title i { color: var(--primary); }
 
-    .section-subtitle-ar {
-      font-family: "Cairo", sans-serif;
-      font-size: .9rem;
-      color: #6b7280;
-    }
-
     .two-col {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      grid-template-columns: minmax(0,1fr);
       gap: 18px;
       margin-top: 10px;
     }
@@ -259,6 +250,7 @@
     .timeline-body li { margin-bottom: 3px; }
 
     .timeline-ar {
+      direction: rtl;
       margin-top: 4px;
       font-size: .84rem;
       font-family: "Cairo", sans-serif;
@@ -301,7 +293,20 @@
       color: #047857;
     }
 
-    .project-card .ar { font-size: .84rem; font-family: "Cairo", sans-serif; }
+    .project-card.wide { grid-column: 1 / -1; }
+    .project-card ul { margin: 4px 0 0 16px; }
+    .project-card li { margin-bottom: 3px; }
+
+    .projects-label {
+      margin-top: 14px;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #6b7280;
+    }
+
+    .projects-label + .projects-grid { margin-top: 6px; }
 
     /* ===== EDUCATION ===== */
     .edu-grid {
@@ -366,27 +371,25 @@
       <div>
         <div class="hero-main-title">PROFESSIONAL PORTFOLIO</div>
         <h1 class="hero-name">Eng. Almuhannad Youssef Shalaha</h1>
-        <div class="hero-role">5G CPE Projects Manager | Telecom Project Manager | FWA Devices</div>
-        <div class="hero-role-ar">
-          مدير مشاريع أجهزة CPE للجيل الخامس | مدير مشاريع اتصالات | مختص بأجهزة الـ FWA
-        </div>
+        <div class="hero-role">Project &amp; Delivery Manager | Technical Pre-Sales &amp; B2B Sales | AI Solutions</div>
 
         <div class="hero-tags">
           <span class="hero-tag"><i class="fa-solid fa-tower-cell"></i>5G CPE &amp; FWA</span>
           <span class="hero-tag"><i class="fa-solid fa-network-wired"></i>TR-069 / ACS / HDM</span>
           <span class="hero-tag"><i class="fa-solid fa-chart-line"></i>KPI &amp; Log Analysis</span>
-          <span class="hero-tag"><i class="fa-solid fa-diagram-project"></i>Telecom Project Coordination</span>
+          <span class="hero-tag"><i class="fa-solid fa-diagram-project"></i>Technical Project Management</span>
+          <span class="hero-tag"><i class="fa-solid fa-handshake"></i>B2B Technical Sales</span>
         </div>
 
         <div class="hero-contact">
           <div class="hero-contact-item">
-            <i class="fa-solid fa-phone"></i><span>+917544423731</span>
+            <i class="fa-solid fa-phone"></i><span>+971 54 442 3731</span>
           </div>
           <div class="hero-contact-item">
             <i class="fa-solid fa-envelope"></i><span>nnoress22@gmail.com</span>
           </div>
           <div class="hero-contact-item">
-            <i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/almuhannad</span>
+            <i class="fa-brands fa-linkedin"></i><span>linkedin.com/in/almuhannad-shalaha-a07690207</span>
           </div>
           <div class="hero-contact-item">
             <i class="fa-solid fa-location-dot"></i><span>Dubai, United Arab Emirates</span>
@@ -395,8 +398,7 @@
       </div>
 
       <div class="hero-photo">
-        <!-- تأكد أن ملف الصورة بنفس الاسم وفي نفس المجلد -->
-        <img src="mu cv pic.jpg" alt="Profile photo of Eng. Almuhannad">
+        <img src="mu cv pic.jpg" alt="Portrait of Eng. Almuhannad Youssef Shalaha">
       </div>
     </header>
 
@@ -404,39 +406,22 @@
     <section>
       <div class="section-header">
         <h2 class="section-title"><i class="fa-solid fa-user-gear"></i> Profile Summary</h2>
-        <div class="section-subtitle-ar">الملخص المهني</div>
       </div>
       <div class="two-col">
         <div class="en">
           <p>
-            Results-driven <strong>5G CPE Projects Manager</strong> with 2+ years of direct experience managing
-            Fixed Wireless Access (FWA) device launches for tier-1 operators (DU UAE, Zain Kuwait, Zain Jordan).
-            Expert in end-to-end device integration using <strong>TR-069, ACS, HDM (testbed &amp; live)</strong>,
-            field &amp; lab testing, KPI analysis (RSRP, RSRQ, SINR, CQI, throughput), log analysis, firmware
-            debugging, and post-launch support.
+            <strong>Project &amp; Delivery Manager</strong> and <strong>B2B technical sales</strong> professional with
+            <strong>20+ years of experience</strong> managing complex B2B client relationships, multi-country
+            technical projects, and commercial contracts across the GCC. Proven ability to coordinate international
+            cross-functional teams, lead product certification and compliance processes, prepare technical-commercial
+            proposals, and drive long-term client retention.
           </p>
           <p>
-            Over <strong>15 years of combined experience</strong> in electronics, telecom, and IT projects,
-            including large-scale procurements, CCTV &amp; security systems, X-ray inspection systems, networking,
-            and ICT infrastructure for government and private sectors. Strong coordination skills between operators,
-            vendors, and R&amp;D teams in China, delivering commercially ready 4G/5G CPEs on time.
-          </p>
-        </div>
-        <div class="ar">
-          <p>
-            مدير مشاريع أجهزة CPE للجيل الخامس يتمتع بذهنية عملية ونتائج ملموسة، مع أكثر من
-            <strong>سنتين من الخبرة المباشرة</strong> في إدارة إطلاق أجهزة الـ FWA لدى مشغلي اتصالات
-            من الفئة الأولى (دو الإمارات، زين الكويت، زين الأردن)، وخبرة عملية في التكامل الكامل للأجهزة باستخدام
-            <strong>TR-069 و ACS و HDM</strong> (بيئة الاختبار والبيئة الحية)، والاختبارات المخبرية
-            والميدانية، وتحليل مؤشرات الأداء (RSRP, RSRQ, SINR, CQI, Throughput)، وتحليل السجلات
-            وتنقيح البرمجيات ودعم ما بعد الإطلاق.
-          </p>
-          <p>
-            يمتلك أكثر من <strong>15 عاماً من الخبرة الكلية</strong> في مجالات الإلكترونيات والاتصالات
-            وتقنية المعلومات، بما في ذلك مشتريات وتجهيز مشاريع كبرى، وأنظمة كاميرات المراقبة والأمن،
-            وأنظمة الفحص بالأشعة، وشبكات البيانات والبنية التحتية لتقنية المعلومات في القطاعين الحكومي
-            والخاص. لديه قدرة عالية على التنسيق بين المشغلين والمورّدين وفرق البحث والتطوير في الصين
-            لتسليم أجهزة CPE للجيلين الرابع والخامس جاهزة تجارياً وفي الوقت المحدد.
+            Hands-on experience in 5G / 4G Fixed Wireless Access (FWA) device launches for tier-1 telecom operators,
+            including end-to-end integration using <strong>TR-069, ACS, HDM (testbed &amp; live)</strong>, field &amp; lab
+            testing, KPI analysis (RSRP, RSRQ, SINR, CQI, throughput), log analysis, firmware debugging, and
+            post-launch support, coordinating operators, vendors, and R&amp;D teams in China. Currently delivering
+            AI solutions projects and adept at translating technical requirements into business solutions.
           </p>
         </div>
       </div>
@@ -446,7 +431,6 @@
     <section>
       <div class="section-header">
         <h2 class="section-title"><i class="fa-solid fa-star"></i> Core Skills</h2>
-        <div class="section-subtitle-ar">المهارات الأساسية</div>
       </div>
       <div class="skills-grid">
         <div class="skill-card">
@@ -479,10 +463,10 @@
         <div class="skill-card">
           <h4><i class="fa-solid fa-diagram-project"></i> Project Management</h4>
           <ul>
-            <li>RFP support &amp; technical responses</li>
+            <li>Technical project management (Agile / Jira)</li>
             <li>Acceptance testing &amp; documentation</li>
             <li>Stakeholder &amp; vendor coordination</li>
-            <li>Risk tracking &amp; mitigation</li>
+            <li>Executive reporting &amp; PMO documentation</li>
           </ul>
         </div>
         <div class="skill-card">
@@ -495,12 +479,12 @@
           </ul>
         </div>
         <div class="skill-card">
-          <h4><i class="fa-solid fa-people-group"></i> Soft Skills</h4>
+          <h4><i class="fa-solid fa-handshake"></i> B2B Technical Sales</h4>
           <ul>
-            <li>Strong bilingual communication (AR/EN)</li>
-            <li>Customer-facing technical discussions</li>
-            <li>Training &amp; knowledge transfer</li>
-            <li>Teamwork &amp; leadership by coordination</li>
+            <li>Key account management (B2B)</li>
+            <li>Technical-commercial proposals &amp; RFPs</li>
+            <li>Contract, SLA &amp; KPI management</li>
+            <li>Multi-country client relationship management</li>
           </ul>
         </div>
       </div>
@@ -510,75 +494,136 @@
     <section>
       <div class="section-header">
         <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
-        <div class="section-subtitle-ar">الخبرة العملية</div>
       </div>
 
       <div class="timeline">
 
-        <!-- 5G CPE Projects Manager -->
+        <!-- Technostream -->
         <div class="timeline-item">
           <div class="timeline-header">
-            <span class="timeline-role">5G CPE Projects Manager | Telecom Project Manager – FWA Devices</span>
-            <span class="timeline-date">Dubai, UAE | Current</span>
+            <span class="timeline-role">Project &amp; Delivery Manager</span>
+            <span class="timeline-date">Dubai, UAE | Present</span>
           </div>
-          <div class="timeline-company">Neoverse L.L.C / Jointelli – DU UAE, Zain Kuwait, Zain Jordan</div>
+          <div class="timeline-company">Technostream FZCO – AI Solutions</div>
           <div class="timeline-body">
             <ul>
-              <li>Managed end-to-end 5G CPE projects for DU UAE, from lab integration and testbed setup to live network acceptance.</li>
-              <li>Performed 5G/4G CPE testing, TR-069/HDM provisioning, KPI validation, and Wi-Fi performance analysis.</li>
-              <li>Coordinated with DU FWA, Service Assurance, HDM, and R&amp;D teams in China to resolve device issues and deliver new firmware.</li>
-              <li>Supported RFP 2026 clarifications, technical response documents, and solution acceptance criteria.</li>
-              <li>Prepared detailed technical reports, logs analysis summaries, and device performance dashboards for internal and customer review.</li>
+              <li>Project and delivery management for AI solutions projects.</li>
             </ul>
-            <div class="timeline-ar">
-              • إدارة مشاريع أجهزة CPE للجيل الخامس الخاصة بشركة دو في الإمارات، من مرحلة الدمج في المختبر وإعداد بيئة HDM، إلى القبول على الشبكة الحية.<br>
-              • تنفيذ اختبارات لأجهزة CPE للجيلين الرابع والخامس، وتجهيز الأجهزة عبر TR-069/HDM، والتحقق من مؤشرات الأداء، وتحليل أداء شبكات Wi-Fi.<br>
-              • التنسيق مع فرق دو (FWA، خدمة العملاء، HDM) ومع فرق البحث والتطوير في الصين لحل المشاكل البرمجية وإصدار نسخ جديدة من البرمجيات الثابتة (Firmware).<br>
-              • دعم عطاء 2026 (RFP) من خلال الردود الفنية، والاستفسارات، وتعريف معايير الاعتماد الفني للحلول والأجهزة.<br>
-              • إعداد تقارير فنية تفصيلية، وتحليلات للسجلات (Logs)، ولوحات متابعة لأداء الأجهزة للاستخدام الداخلي وللعميل.
-            </div>
           </div>
         </div>
 
-        <!-- Government / Port / ICT & Procurement -->
+        <!-- Jointelli -->
         <div class="timeline-item">
           <div class="timeline-header">
-            <span class="timeline-role">Electronics &amp; Telecom Engineer | IT &amp; Procurement Projects</span>
-            <span class="timeline-date">Syria | 15+ Years</span>
+            <span class="timeline-role">GCC Project Manager &amp; Pre-Sales Manager</span>
+            <span class="timeline-date">Dubai, UAE | 2024 – Present</span>
+          </div>
+          <div class="timeline-company">Jointelli – GCC &amp; MENA Region</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Manage end-to-end technical acceptance projects with leading regional telecom operators and enterprise clients across the GCC and MENA region, acting as the primary technical and commercial point of contact.</li>
+              <li>Diagnosed and resolved a critical product performance issue, coordinating international R&amp;D and field teams to deliver a corrective firmware solution within agreed timelines, protecting a key client relationship.</li>
+              <li>Lead product certification and regulatory compliance processes for telecom-grade hardware, coordinating with regulatory authorities and international technical teams.</li>
+              <li>Prepare technical-commercial proposals, contract terms, and SLA/KPI frameworks, supporting contract negotiations and renewals.</li>
+              <li>Manage after-sales service tickets and resolution tracking via HPSM (HP Service Manager), in coordination with operator service teams.</li>
+              <li>Built a structured PMO documentation system (Jira-based), improving multi-country project tracking, stakeholder reporting, and issue escalation.</li>
+              <li>Conduct product performance benchmarking and root-cause analysis, producing detailed performance reports for client technical teams.</li>
+              <li>Promoted from Project Engineer to Project Manager within the first year, based on performance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Daniello -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Operations &amp; Manufacturing Supervisor</span>
+            <span class="timeline-date">Ajman, UAE | 2023</span>
+          </div>
+          <div class="timeline-company">Daniello</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Managed manufacturing operations, delivery scheduling, and quality control processes.</li>
+              <li>Coordinated cross-departmental workflows to meet production deadlines and quality standards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Thuraya -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Sales &amp; After-Sales Service Supervisor</span>
+            <span class="timeline-date">Dubai, UAE | 2022</span>
+          </div>
+          <div class="timeline-company">Thuraya</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Managed B2B sales and after-sales maintenance services for enterprise clients.</li>
+              <li>Supervised service delivery quality and customer satisfaction for post-sale support contracts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Public sector (continuous, 2002 - 2021) -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Head of Land &amp; Marine Communications and Electronic Equipment Maintenance Department</span>
+            <span class="timeline-date">Syria | 2005 – 2021</span>
           </div>
           <div class="timeline-company">Public Sector – Port &amp; Government Entities</div>
           <div class="timeline-body">
             <ul>
-              <li>Led technical evaluation and procurement for large ICT and infrastructure projects (data center, PCs, printers, cabinets, UPS).</li>
-              <li>Managed CCTV surveillance systems, X-ray inspection systems, access control, time attendance, and network installations.</li>
+              <li>Responsible for land and marine communications systems and the maintenance of electronic equipment.</li>
+              <li>Led technical evaluation and procurement for large ICT and infrastructure projects (data center, PCs, printers, network cabinets, UPS).</li>
+              <li>Supervised execution and acceptance of fiber-optic cabling, CCTV surveillance, access control/detection, time attendance, X-ray inspection systems, and network installations for public sector institutions.</li>
               <li>Served as Head of Procurement Committee for marine transport projects, handling vendor selection, quotations, and contract follow-up.</li>
-              <li>Coordinated with multiple departments, vendors, and contractors to ensure timely delivery and technical compliance.</li>
+              <li>Coordinated multi-disciplinary technical teams, departments, vendors, and contractors across multiple project sites to ensure timely delivery and technical compliance.</li>
             </ul>
-            <div class="timeline-ar">
-              • قيادة التقييم الفني والمشتريات لمشاريع كبرى في مجال تقنية المعلومات والبنية التحتية (مركز بيانات، حواسيب، طابعات، خزائن شبكات، وأنظمة UPS).<br>
-              • إدارة مشاريع كاميرات المراقبة، وأنظمة الفحص بالأشعة، وأنظمة التحكم بالدخول، وأنظمة حضور وانصراف الموظفين، وشبكات الاتصالات والبيانات.<br>
-              • العمل كرئيس لجنة المشتريات لمشاريع قطاع النقل البحري، مع مسؤولية اختيار المورّدين، ومقارنة العروض، ومتابعة العقود والتنفيذ.<br>
-              • التنسيق مع الأقسام المختلفة والمورّدين والمتعهدين لضمان التسليم في الوقت المحدد، والالتزام بالمواصفات الفنية.
-            </div>
           </div>
         </div>
 
-        <!-- Graphic Design -->
         <div class="timeline-item">
           <div class="timeline-header">
-            <span class="timeline-role">Graphic Designer (Part-time)</span>
-            <span class="timeline-date">Abu Dhabi, UAE</span>
+            <span class="timeline-role">Maintenance Engineer – Electric Cranes &amp; Control Systems</span>
+            <span class="timeline-date">Syria | 2002 – 2005</span>
           </div>
-          <div class="timeline-company">Lanovill Art</div>
+          <div class="timeline-company">Public Sector – Port &amp; Government Entities</div>
           <div class="timeline-body">
             <ul>
-              <li>Worked on visual designs, branding elements, and marketing materials.</li>
-              <li>Supported social media content and layout design for print and digital campaigns.</li>
+              <li>Maintained electric cranes and their control systems.</li>
             </ul>
-            <div class="timeline-ar">
-              • العمل على التصاميم البصرية وعناصر الهوية البصرية والمواد التسويقية.<br>
-              • دعم محتوى وسائل التواصل الاجتماعي وتصميم المطبوعات والمواد الرقمية.
-            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-label">Concurrent activities, outside government working hours (Syria)</div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Sales &amp; Customer Service Manager</span>
+            <span class="timeline-date">2002 – 2010</span>
+          </div>
+          <div class="timeline-company">ITS (Authorized Agent of MTN)</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Achieved 30% growth in sales operations through improved processes and customer engagement strategies.</li>
+              <li>Built and maintained long-term client relationships across an 8-year tenure.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-role">Maintenance &amp; After-Sales Service Supervisor</span>
+            <span class="timeline-date">2010 – 2014</span>
+          </div>
+          <div class="timeline-company">Al Buraq (Authorized Agent of Samsung)</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Supervised maintenance operations and after-sales service delivery for Samsung-branded products.</li>
+              <li>Managed technical service quality and customer satisfaction across the after-sales lifecycle.</li>
+            </ul>
           </div>
         </div>
 
@@ -588,44 +633,53 @@
     <!-- PROJECTS / HIGHLIGHTS -->
     <section>
       <div class="section-header">
-        <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Selected Telecom Projects</h2>
-        <div class="section-subtitle-ar">أهم مشاريع الاتصالات وأجهزة CPE</div>
+        <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Selected Projects</h2>
       </div>
 
+      <div class="projects-label">Telecom &amp; 5G</div>
+      <div class="projects-grid">
+        <div class="project-card wide">
+          <h4><i class="fa-solid fa-tower-cell"></i> du (UAE) – 5G CPE Project <span class="pill">5G CPE</span></h4>
+          <p>End-to-end 5G CPE project for du, delivered through the following workstreams:</p>
+          <ul>
+            <li><strong>RFP support:</strong> technical clarifications, solution design inputs, and acceptance test plans for the 5G CPE RFP and framework agreement.</li>
+            <li><strong>TR-069 / HDM integration:</strong> device parameters, auto-provisioning, HDM KPIs, and device policies for customer journeys (activation, swap, replacement).</li>
+            <li><strong>Field testing &amp; KPI benchmarking:</strong> field tests with the operator to benchmark 5G CPE performance (RSRP, SINR, throughput) across bands and locations.</li>
+            <li><strong>Security &amp; firmware hardening:</strong> aligned firmware, user access, and logging with the operator’s security requirements, in collaboration with vendors.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h4><i class="fa-solid fa-clipboard-check"></i> Zain Kuwait – Acceptance Testing <span class="pill">Acceptance</span></h4>
+          <p>Technical acceptance testing project for Zain Kuwait.</p>
+        </div>
+
+        <div class="project-card">
+          <h4><i class="fa-solid fa-satellite-dish"></i> Salamtel (Saudi Arabia) – ODU Testing <span class="pill">ODU</span></h4>
+          <p>Outdoor unit (ODU) tests for Salamtel in Saudi Arabia.</p>
+        </div>
+
+        <div class="project-card wide">
+          <h4><i class="fa-solid fa-file-lines"></i> Omantel (Oman) – RFI <span class="pill">RFI</span></h4>
+          <p>RFI (Request for Information) engagement with Omantel.</p>
+        </div>
+      </div>
+
+      <div class="projects-label">Infrastructure &amp; Security Systems (Syria)</div>
       <div class="projects-grid">
         <div class="project-card">
-          <h4><i class="fa-solid fa-tower-cell"></i> DU UAE – 5G CPE RFP &amp; Acceptance <span class="pill">5G CPE</span></h4>
-          <p>Supported technical clarifications, solution design inputs, and acceptance test plans for DU’s 5G CPE RFP and framework agreement.</p>
-          <p class="ar">
-            دعم الاستفسارات الفنية، والمقترحات التقنية، وخطط الاختبارات الخاصة بعطاء دو لأجهزة CPE للجيل الخامس والاتفاقية الإطارية المرتبطة به.
-          </p>
+          <h4><i class="fa-solid fa-database"></i> Transport Sector Data Center (2006) <span class="pill">Data Center</span></h4>
+          <p>Data center project linking the maritime, land, and air transport sectors, funded by an Arab League grant.</p>
         </div>
 
         <div class="project-card">
-          <h4><i class="fa-solid fa-network-wired"></i> TR-069 / HDM Integration &amp; Policies <span class="pill">TR-069</span></h4>
-          <p>Configured device parameters, tested auto-provisioning, HDM KPIs, and device policies for different customer journeys (activation, swap, replacement).</p>
-          <p class="ar">
-            ضبط معاملات أجهزة CPE، واختبار التجهيز الآلي عبر TR-069، والتحقق من مؤشرات الأداء وسياسات HDM
-            لرحلات العملاء المختلفة مثل التفعيل الأولي، واستبدال الجهاز، وإعادة الضبط.
-          </p>
+          <h4><i class="fa-solid fa-video"></i> Latakia Port – CCTV &amp; Fiber Network (2009) <span class="pill">CCTV &amp; Fiber</span></h4>
+          <p>Supervision and acceptance of the CCTV system and fiber-optic network at Latakia Port.</p>
         </div>
 
-        <div class="project-card">
-          <h4><i class="fa-solid fa-road"></i> Field Testing &amp; KPI Benchmarking <span class="pill">Performance</span></h4>
-          <p>Executed field tests with operators to benchmark 5G CPE performance (RSRP, SINR, throughput) across bands and locations.</p>
-          <p class="ar">
-            تنفيذ اختبارات ميدانية مع المشغلين لمقارنة أداء أجهزة CPE للجيل الخامس (RSRP, SINR, السرعة)
-            على حوامل تردد ومواقع مختلفة.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <h4><i class="fa-solid fa-shield-halved"></i> Security &amp; Firmware Hardening <span class="pill">Security</span></h4>
-          <p>Collaborated with vendors to align firmware, user access, and logging with DU security, TSRM, and IOC requirements.</p>
-          <p class="ar">
-            التعاون مع المورّدين لمواءمة إعدادات البرمجيات الثابتة، وصلاحيات المستخدمين، وأنظمة التسجيل (Logs)
-            مع متطلبات الأمن السيبراني لدى دو وفرق TSRM و IOC.
-          </p>
+        <div class="project-card wide">
+          <h4><i class="fa-solid fa-magnifying-glass"></i> Latakia Port – Inspection Systems <span class="pill">Security</span></h4>
+          <p>Inspection equipment for vehicles, baggage, trucks (truck scanner), and persons at Latakia Port, Syria.</p>
         </div>
       </div>
     </section>
@@ -633,31 +687,29 @@
     <!-- EDUCATION & COURSES -->
     <section>
       <div class="section-header">
-        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education &amp; Courses</h2>
-        <div class="section-subtitle-ar">التعليم والدورات</div>
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education &amp; Certifications</h2>
       </div>
 
       <div class="edu-grid">
         <div class="edu-item">
-          <h4>Bachelor’s Degree in Electronics / Communications Engineering</h4>
-          <div class="school">Faculty of Engineering</div>
-          <div class="ar">
-            بكالوريوس في هندسة الإلكترونيات والاتصالات – كلية الهندسة.
-          </div>
+          <h4>Bachelor of Electrical Engineering (Electronics)</h4>
+          <div class="school">Tishreen University</div>
         </div>
 
         <div class="edu-item">
-          <h4>Continuous Professional Development</h4>
+          <h4>Certifications &amp; Professional Development</h4>
           <div class="school">Online Platforms &amp; Universities</div>
-          <div class="ar">
-            التطوير المهني المستمر عبر منصات تعليمية وجامعات دولية:
-          </div>
           <div class="bullets">
             <ul>
+              <li>Foundations of Project Management – Google (2025)</li>
+              <li>Project Initiation: Starting a Successful Project – Google (2025)</li>
+              <li>Agile with Atlassian Jira – Atlassian (2026)</li>
+              <li>Get Started with Jira – Coursera (2025)</li>
+              <li>Microsoft Certified Systems Administrator (MCSA) – 2008</li>
+              <li>Oracle Database &amp; Application Development – 2006</li>
               <li>Introduction to IoT – University of California</li>
               <li>Programming for Everybody (Python) – University of Michigan</li>
-              <li>PMP / Agile – In Progress</li>
-              <li>Courses in Linux, Networking, Data Analysis &amp; Project Management</li>
+              <li>Continuous development: Power BI, Odoo ERP (2025 – 2026)</li>
             </ul>
           </div>
         </div>
@@ -668,7 +720,6 @@
     <section>
       <div class="section-header">
         <h2 class="section-title"><i class="fa-solid fa-microchip"></i> Technical Stack</h2>
-        <div class="section-subtitle-ar">المهارات التقنية التفصيلية</div>
       </div>
       <div class="bullets">
         <ul>
@@ -677,12 +728,8 @@
           <li>Wi-Fi 6/7 Testing &amp; Wireless Parameters</li>
           <li>Log Analysis | OpenWRT | Linux | Basic Networking</li>
           <li>Project Management | Risk Management | Stakeholder Management</li>
+          <li>Tools: Jira | HPSM (HP Service Manager) | Power BI | Microsoft Excel | MS Office Suite | CRM Tools</li>
         </ul>
-        <p class="ar">
-          تشمل المهارات التقنية: اختبارات أجهزة CPE للجيل الخامس، بروتوكول TR-069 وأنظمة ACS / HDM،
-          تنقيح البرمجيات الثابتة، تحليل مؤشرات الأداء اللاسلكية، اختبارات Wi-Fi 6/7، تحليل سجلات الأنظمة،
-          العمل على OpenWRT و Linux، إضافة إلى إدارة المشاريع والمخاطر والتعامل مع أصحاب المصلحة.
-        </p>
       </div>
     </section>
 
@@ -690,22 +737,18 @@
     <section>
       <div class="section-header">
         <h2 class="section-title"><i class="fa-solid fa-language"></i> Languages</h2>
-        <div class="section-subtitle-ar">اللغات</div>
       </div>
-      <p><strong>Arabic:</strong> Native | <strong>English:</strong> Very Good</p>
-      <p class="ar">اللغة العربية: اللغة الأم | اللغة الإنجليزية: جيد جداً.</p>
+      <p><strong>Arabic:</strong> Native | <strong>English:</strong> Advanced Professional</p>
     </section>
 
     <!-- FOOTER -->
     <div class="footer">
       <p>
         For full CV, references, or detailed project briefs, please contact:
-        <br>
-        للحصول على السيرة الذاتية الكاملة أو تفاصيل المشاريع، يُرجى التواصل:
       </p>
       <p style="margin-top:6px;">
         <i class="fa-solid fa-envelope"></i> nnoress22@gmail.com &nbsp; | &nbsp;
-        <i class="fa-solid fa-phone"></i> +917544423731
+        <i class="fa-solid fa-phone"></i> +971 54 442 3731
       </p>
     </div>
 
